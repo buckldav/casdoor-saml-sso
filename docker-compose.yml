@@ -1,0 +1,44 @@
+version: "3.1"
+services:
+  casdoor-master:
+    image: casbin/casdoor:latest
+    entrypoint: /bin/sh -c './server --createDatabase=true'
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db-master
+    environment:
+      RUNNING_IN_DOCKER: "true"
+    volumes:
+      - ./conf-master:/conf/
+  db-master:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db-vols/master:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=casdoor
+  casdoor-single:
+    image: casbin/casdoor:latest
+    entrypoint: /bin/sh -c './server --createDatabase=true'
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db-single
+    environment:
+      RUNNING_IN_DOCKER: "true"
+    volumes:
+      - ./conf-single:/conf/
+  db-single:
+    image: postgres:14-alpine
+    ports:
+      - 5433:5432
+    volumes:
+      - ./db-vols/single:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=casdoor
