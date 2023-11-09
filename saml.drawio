@@ -1,0 +1,22 @@
+<mxfile host="65bd71144e">
+    <diagram id="48c34SLLx5jMewYRRZcs" name="Page-1">
+        <mxGraphModel dx="1139" dy="387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="SP&lt;br&gt;&lt;br&gt;localhost:8001" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="IdP&lt;br&gt;&lt;br&gt;localhost:8000" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;h1&gt;SAML&lt;/h1&gt;&lt;div&gt;https://www.youtube.com/watch?v=bmZdZy6qe24&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;security assertion markup language&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;identity provider: verify client -&amp;gt; provide access&lt;/div&gt;&lt;div&gt;service provider: provide software access&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="50" width="320" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Hosting API&lt;br&gt;&lt;br&gt;Keep storing hosting_customer users here.&lt;br&gt;SAML with their casdoor instance (if applicable)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="300" width="300" height="100" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

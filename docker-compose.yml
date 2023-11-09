@@ -11,16 +11,21 @@ services:
       RUNNING_IN_DOCKER: "true"
     volumes:
       - ./conf-master:/conf/
+      - ./init/master.json:/init_data.json
+    networks:
+      - cas-master
   db-master:
     image: postgres:14-alpine
     ports:
       - 5432:5432
     volumes:
-      - ./db-vols/master:/var/lib/postgresql/data
+      - db-master:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=casdoor
+    networks:
+      - cas-master
   casdoor-single:
     image: casbin/casdoor:latest
     entrypoint: /bin/sh -c './server --createDatabase=true'
@@ -32,13 +37,25 @@ services:
       RUNNING_IN_DOCKER: "true"
     volumes:
       - ./conf-single:/conf/
+    networks:
+      - cas-single
   db-single:
     image: postgres:14-alpine
     ports:
       - 5433:5432
     volumes:
-      - ./db-vols/single:/var/lib/postgresql/data
+      - db-single:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=casdoor
+    networks:
+      - cas-single
+networks:
+  cas-master:
+    driver: bridge
+  cas-single:
+    driver: bridge
+volumes:
+  db-single:
+  db-master:

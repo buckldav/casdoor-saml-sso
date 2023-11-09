@@ -1,1 +1,2 @@
-db-vols/
+env/
+__pycache__/
