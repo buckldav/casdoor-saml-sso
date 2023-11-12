@@ -1,0 +1,17 @@
+---
+const {noAuthChildren, authChildren} = Astro.props;
+---
+
+<div id="noAuth" style="display: none">{noAuthChildren}</div>
+<div id="auth" style="display: none">{authChildren}</div>
+<div id="app"></div>
+
+<script type="module">
+  import { isLoggedIn } from "./config";
+  const app = document.getElementById("app");
+  if (isLoggedIn()) {
+    app!.innerHTML = document.getElementById("noAuth")!.innerHTML;
+  } else {
+    app!.innerHTML = document.getElementById("auth")!.innerHTML;
+  }
+</script>

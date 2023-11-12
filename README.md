@@ -63,3 +63,4 @@ password: 123
 ## SAML SSO
 
 https://casdoor.org/docs/how-to-connect/single-sign-on/
+https://github.com/casdoor/casdoor-react-sdk

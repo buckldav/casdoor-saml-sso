@@ -1,0 +1,11 @@
+---
+import { logInURL } from "../auth/settings";
+// const logInURL = "/";
+import Layout from "../layouts/Layout.astro";
+import { AuthGuard } from "../auth/auth-guard";
+import Guard from "../auth/guard.astro";
+---
+
+<Layout>
+  <AuthGuard client:only="react" authChildren={"you are logged in goob"} />
+</Layout>
