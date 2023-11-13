@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from .orm import orm_create_user
 from settings.database import get_db
 from .models import UserCreate
 
@@ -12,5 +13,6 @@ def list_users(db: Session = Depends(get_db)):
 
 
 @router.post("")
-def create_user(user: UserCreate):
-    return {}
+def create_user(user_create: UserCreate, db: Session = Depends(get_db)):
+    user = orm_create_user(db, user_create)
+    return {"name": user.name}

@@ -7,5 +7,40 @@ import Guard from "../auth/guard.astro";
 ---
 
 <Layout>
-  <AuthGuard client:only="react" authChildren={"you are logged in goob"} />
+  <!-- <AuthGuard client:only="react" authChildren={"you are logged in goob"} /> -->
+  <h1>Learn Stuff</h1>
+  <p>Want big brain? Give me your deets.</p>
+  <form id="click-funnel">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    const clickFunnel = document.getElementById("click-funnel");
+    clickFunnel!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(clickFunnel as HTMLFormElement);
+      data.set("owner", "built-in");
+      data.set("signup_application", "astro-sso");
+      const json = Object.fromEntries(data.entries());
+      fetch("http://localhost:8888/api/users", {
+        method: "POST",
+        body: JSON.stringify(json),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((res) => {
+        console.log(res.status);
+        res.json().then((result) => {
+          console.log(result);
+        });
+      });
+    });
+  </script>
 </Layout>

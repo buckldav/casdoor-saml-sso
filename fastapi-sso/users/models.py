@@ -306,10 +306,10 @@ class UserORM(Base):
 
 
 class UserShared(BaseModel):
-    display_name: Optional[str]
-    password: Optional[str]
-    email: Optional[str]
-    phone: Optional[str]
+    display_name: Optional[str] = None
+    password: Optional[str] = None
+    email: Optional[str] = None
+    phone: Optional[str] = None
     signup_application: Optional[str] = Field(
         description="Where the sign up came from", default="app-built-in"
     )
@@ -325,8 +325,8 @@ class UserCreate(UserShared):
         description="Added by the client or by the backend process"
     )
     name: str = Field(description="Username")
-    confirm: Optional[str] = Field(description="confirm password")
-    agreement: Optional[bool]
+    confirm: Optional[str] = Field(description="confirm password", default=None)
+    agreement: Optional[bool] = None
 
 
 class User(UserShared):

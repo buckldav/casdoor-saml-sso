@@ -60,7 +60,8 @@ def get_sdk_from_request(request: Request) -> AsyncCasdoorSDK | None:
 
 class Settings(BaseModel):
     db_url: str = config(
-        "CASDOOR_DB_URL", default="postgresql://admin:password@localhost:5433/casdoor"
+        "CASDOOR_DB_URL",
+        default="postgresql://postgres:postgres@localhost:5433/casdoor",
     )
 
 
