@@ -1,0 +1,32 @@
+{
+  "casdoor_endpoint": "http://localhost:8001",
+  "certificates": {
+    "built-in": "-----BEGIN CERTIFICATE-----MIIE3TCCAsWgAwIBAgIDAeJAMA0GCSqGSIb3DQEBCwUAMCgxDjAMBgNVBAoTBWFkbWluMRYwFAYDVQQDEw1jZXJ0LWJ1aWx0LWluMB4XDTIzMTEwOTIwMjczMVoXDTQzMTEwOTIwMjczMVowKDEOMAwGA1UEChMFYWRtaW4xFjAUBgNVBAMTDWNlcnQtYnVpbHQtaW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDJ21EKxS77+1pb2a2s2TItSWutBkMRTZUDbJJTJDbseJNhtmNq44Mroo3ADxjAE4eMajyPau+fJchCnD/n5gYZYuLpWeJzZFgz7dZ+c+LVgsE9AyfUJod9gEOJ+hIPcyZ7gFXssxOKJjEB3BlT4MTgpzxKy2cbXnAkdM5T4cvkI/aawdJ346Nlt6G7cQuGca6uSMVEyeOV6zv6u7BD2w4MALYPopguG74dsr96CykvKU3cw9XlZ/SYoSkC+NTn3AAeqWqqweaaki7uSHi1uDreA2km7LDzd6t1XvUbst9PWOIiYLhtbAfqmNT1qV4j3QNnbDe1rOlZ8RrKpiR4OQQmOBlkM1ci+/y6F2GNKP9c9r/fAV1ZuP7xes9Geaj97HTgvTIZBfcX3W6UavzHSoED7s3bC07qjHoJJL2LRxgy95NUvdKwngsG97g/Pi2YF0df02f8nyrrO+/bhQQid4R2r9ZraRqYKref3TB+Z0J3FrJm/l1xTcVRo0d6waX09dEDDL9XzNHtpMA1K08zSrzfZhWghBpQLxb5dL0K6yI37kRrvNM0jlDEuVWTOPaheq4iMKczv79aYHRDotzWr/pZVAAwmrzN2rX1thAB3jjyQBL8IkwObF5GV7Gq7DKTvlWFOxo0rz1SYLPy2yQURzW6PTI/4EhZcP0vtmZM4bhSDwIDAQABoxAwDjAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBCwUAA4ICAQAsjfIsv5GzQBTclqMvq23fahQ/ZzFpvKp3u5yTMMwY132kf/5F5uh2MIKCdKGfXgoAN0WX+SuuoJKWCCM/lr+7m4nxhY8qHUFyrp6ByQCCArOVpJ/54OWpuESz0skhz2Sx8v9Lq7BSxI0ysHKjoE7Nj95n/TEvATAdki8oxNdWvR111gu4Qatg8PBprAkanyckQi/RGNQzw0+Oy+G0FylPJTOxC3jjCYP7xUfnnMbdddrsmz0jlXYuqEx94gxfUFbLe2yx7LtPy+U8yj8YZcU+MoV1SlycB5cXyf44pj3z27ziKC69r6jQlCbpIT1QEcZ5EzvwObg6lK5SXXAccUzM67rpnRqTm65kUBTHaLhpxqfg4DZKbiM9zYlhLbhWCbKZ7FeAlrThGcQvzO2n//mjaGPNvPZtIbxBeOKyaNGqKx+ckosZwhGbX5nNBmYr1D7C9GAffLC/PhLDtQl87Mv/xpfkcfloyLgiQUf89TmE2F5or+D8yFbgXQGdxmLUdhQhE6T/CH9UBhk60+46YxLFV0N2DZDltyY3ttcRQvkNLMRfBI7F+7DEdKeBHGlzhVA2EjA54R+9audn8uGDhaVUDyTAIumQSVASo5cbn3FXfl/RUMnusAItIvsSSzOZ4zMg1wZOXGl0Dw0YnxOygTVXGAh6q97VQZklwqwSNAZYhA==-----END CERTIFICATE-----"
+  },
+  "apps": [
+    {
+      "endpoint": "http://localhost:5173",
+      "org_name": "built-in",
+      "application_name": "react-sso",
+      "client_id": "0a2cd1b53ff7f709be97",
+      "client_secret": "d2a972cc6c56e45e375498c8e8d329b38395bf2a",
+      "certificate": "built-in"
+    },
+    {
+      "endpoint": "http://localhost:8888",
+      "org_name": "built-in",
+      "application_name": "fast-sso",
+      "client_id": "c8467984942e5d83af06",
+      "client_secret": "fb67fa94f5b4d50c570a41ce225c076284b86516",
+      "certificate": "built-in"
+    },
+    {
+      "endpoint": "http://localhost:4321",
+      "org_name": "built-in",
+      "application_name": "astro-sso",
+      "client_id": "fe289a70c81ee64224fc",
+      "client_secret": "674529d92532414a57b4f7e2dcc5673f481bbf49",
+      "certificate": "built-in"
+    }
+  ]
+}
