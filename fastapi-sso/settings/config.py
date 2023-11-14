@@ -64,5 +64,18 @@ class Settings(BaseModel):
         default="postgresql://postgres:postgres@localhost:5433/casdoor",
     )
 
+    # FastMail SMTP server settings
+    mail_console: bool = config("MAIL_CONSOLE", default=False, cast=bool)
+    mail_server: str = config(
+        "MAIL_SERVER", default="smtp.sendgrid.net"
+    )  # smtp.sendgrid.net <- SendGrid SMTP server used for developement
+    mail_port: int = config("MAIL_PORT", default=587, cast=int)
+    mail_username: str = config("MAIL_USERNAME", default="")
+    mail_password: str = config("MAIL_PASSWORD", default="")
+    mail_sender: str = config(
+        "MAIL_SENDER",
+        default="noreply@springmicrohost.com",  # Replace with desired email
+    )
+
 
 CONFIG = Settings()

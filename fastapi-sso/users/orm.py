@@ -16,6 +16,8 @@ def orm_get_users(db: Session, skip: int = 0, limit: int = 100):
 
 
 def orm_create_user(db: Session, user_create: models.UserCreate):
+    if user_create.name is None and user_create.email is not None:
+        user_create.name = user_create.email
     user = models.User(**user_create.model_dump())
     # fake_hashed_password = user.password + "notreallyhashed"
     db_user = models.UserORM(**user.model_dump())

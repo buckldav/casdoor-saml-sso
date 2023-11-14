@@ -306,6 +306,10 @@ class UserORM(Base):
 
 
 class UserShared(BaseModel):
+    owner: Optional[str] = Field(
+        description="Added by the client or by the backend process"
+    )
+    name: Optional[str] = Field(description="Username", default=None)
     display_name: Optional[str] = None
     password: Optional[str] = None
     email: Optional[str] = None
@@ -321,10 +325,6 @@ class UserCreate(UserShared):
     Default sign-up items can be found in a Casdoor application's edit screen.
     """
 
-    owner: Optional[str] = Field(
-        description="Added by the client or by the backend process"
-    )
-    name: str = Field(description="Username")
     confirm: Optional[str] = Field(description="confirm password", default=None)
     agreement: Optional[bool] = None
 
