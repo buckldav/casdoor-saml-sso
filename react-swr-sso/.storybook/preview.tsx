@@ -1,6 +1,7 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 // import { RouterContext } from "next/dist/shared/lib/router-context" // next 12
 import "@fontsource/red-hat-display/300.css";
 import "@fontsource/red-hat-display/400.css";
@@ -13,10 +14,12 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "../src/theme";
 
 export const withProviders = (Story) => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Story />
-  </ThemeProvider>
+  <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Story />
+    </ThemeProvider>
+  </LocalizationProvider>
 );
 
 const preview: Preview = {
