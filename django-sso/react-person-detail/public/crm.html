@@ -1,0 +1,225 @@
+<form method="post" enctype="multipart/form-data">
+  <input
+    type="hidden"
+    name="csrfmiddlewaretoken"
+    value="8V04IAjjQaV3GbFj0AqxRpZW3KJkTQpmvG6GOVCwQtgLRxeVxaRSklfZ9TAs0qq7"
+  />
+
+  <div id="div_id_description" class="mb-3">
+    <label
+      for="id_description"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Customer Notes<span class="asteriskField">*</span>
+    </label>
+    <textarea
+      name="description"
+      cols="40"
+      rows="10"
+      class="textarea w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      required
+      id="id_description"
+    >
+Magellan College Admissions project.
+Neumont VP of Admissions.</textarea
+    >
+  </div>
+  <div id="div_id_first_name" class="mb-3">
+    <label
+      for="id_first_name"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      First Name<span class="asteriskField">*</span>
+    </label>
+    <input
+      type="text"
+      name="first_name"
+      value="Rob"
+      maxlength="50"
+      class="textinput w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      required
+      id="id_first_name"
+    />
+  </div>
+  <div id="div_id_last_name" class="mb-3">
+    <label
+      for="id_last_name"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Last Name<span class="asteriskField">*</span>
+    </label>
+    <input
+      type="text"
+      name="last_name"
+      value="Dillman"
+      maxlength="50"
+      class="textinput w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      required
+      id="id_last_name"
+    />
+  </div>
+  <div id="div_id_business_name" class="mb-3">
+    <label
+      for="id_business_name"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Business Name
+    </label>
+    <input
+      type="text"
+      name="business_name"
+      maxlength="75"
+      class="textinput w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      id="id_business_name"
+    />
+  </div>
+  <div id="div_id_url" class="mb-3">
+    <label for="id_url" class="block text-gray-700 text-sm font-bold mb-2">
+      Website
+    </label>
+    <input
+      type="url"
+      name="url"
+      maxlength="200"
+      class="urlinput w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      id="id_url"
+    />
+  </div>
+  <div id="div_id_hot" class="mb-3">
+    <label for="id_hot" class="block text-gray-700 text-sm font-bold mb-2">
+      Hot<span class="asteriskField">*</span>
+    </label>
+    <div class="mb-3">
+      <div class="relative">
+        <select
+          class="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal text-gray-700"
+          name="hot"
+        >
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+        >
+          <svg
+            class="fill-current h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="div_id_is_affiliate" class="mb-3">
+    <label
+      for="id_is_affiliate"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Affiliate
+    </label>
+    <input
+      type="checkbox"
+      name="is_affiliate"
+      class="checkboxinput"
+      id="id_is_affiliate"
+    />
+  </div>
+  <div id="div_id_smaccountmanager" class="mb-3">
+    <label
+      for="id_smaccountmanager"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Account Manager
+    </label>
+    <div class="mb-3">
+      <div class="relative">
+        <select
+          class="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal text-gray-700"
+          name="smaccountmanager"
+        >
+          <option value="">---------</option>
+          <option value="1" selected>
+            Gibson, Keith (kgibson@springmicro.com)
+          </option>
+          <option value="3">Gibson, Wilken (wilken@springmicro.com)</option>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+        >
+          <svg
+            class="fill-current h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="div_id_email" class="mb-3">
+    <label for="id_email" class="block text-gray-700 text-sm font-bold mb-2">
+      Email<span class="asteriskField">*</span>
+    </label>
+    <input
+      type="email"
+      name="email"
+      value="rdillman@neumont.edu"
+      maxlength="254"
+      class="emailinput w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      required
+      id="id_email"
+    />
+  </div>
+  <div id="div_id_profile_picture" class="mb-3">
+    <label
+      for="id_profile_picture"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Profile Picture
+    </label>
+    <input
+      type="file"
+      name="profile_picture"
+      accept="image/*"
+      class="clearablefileinput"
+      id="id_profile_picture"
+    />
+  </div>
+  <div id="div_id_hostingapiid" class="mb-3">
+    <label
+      for="id_hostingapiid"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Hosting API ID
+    </label>
+    <input
+      type="text"
+      name="hostingapiid"
+      maxlength="50"
+      class="textinput w-full focus:outline-none border-gray-300 bg-white border leading-normal block px-4 appearance-none py-2 text-gray-700 rounded-lg"
+      id="id_hostingapiid"
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md"
+  >
+    Submit
+  </button>
+</form>
